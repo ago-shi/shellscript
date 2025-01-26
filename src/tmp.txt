@@ -1,0 +1,11 @@
+elif [ "${CRT_EXIST}" = "TRUE" ] && [ "${PRIV_EXIST}" = "FALSE" ]; then
+    MSG="[vault certification]WARNING private key is absent. certificate needs update."
+    CRT_UPD="TRUE"
+
+elif [ "${CRT_EXIST}" = "FALSE" ] && [ "${PRIV_EXIST}" = "TRUE" ]; then
+    MSG="[vault certification]WARNING certificate is absent. certificate needs update."
+    CRT_UPD="TRUE"
+
+elif [ "${CRT_EXIST}" = "FALSE" ] && [ "${PRIV_EXIST}" = "FALSE" ]; then
+    MSG="[vault certification]certificate & private key is absent. certificate needs update."
+    CRT_UPD="TRUE"
